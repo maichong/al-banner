@@ -1,0 +1,13 @@
+<view>
+  <swiper class="banner-size"
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoPlay}}"
+          interval="{{interval}}"
+          duration="{{duration}}">
+    <block wx:for="{{list}}">
+      <swiper-item>
+        <image class="banner-size" src="{{item.pic}}" data-url="{{item.url}}" data-id="{{item.id}}" catchtap="handleTab"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

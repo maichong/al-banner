@@ -1,0 +1,24 @@
+{
+  "name": "al-banner",
+  "version": "0.1.0",
+  "description": "AL banner",
+  "keywords": [
+    "alaska",
+    "labrador"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maichong/al-banner.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maichong/al-banner/issues"
+  },
+  "homepage": "https://github.com/maichong/al-banner#readme",
+  "author": {
+    "email": "li@maichong.it",
+    "name": "li",
+    "url": "https://github.com/maichonglyd"
+  }
+}
