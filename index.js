@@ -5,8 +5,9 @@
  */
 
 import wx from 'labrador';
+import immutable from 'seamless-immutable';
 
-const { bool, number, Function, array } = wx.PropTypes;
+const { bool, number, func, array } = wx.PropTypes;
 
 
 export default class Banner extends wx.Component {
@@ -16,10 +17,11 @@ export default class Banner extends wx.Component {
     interval: number,
     duration: number,
     list: array,
-    onBannerTap: Function
+    onBannerTap: func
   };
 
   data = {
+    list: immutable([]),
     indicatorDots: true,
     autoPlay: true,
     interval: 3000,
@@ -29,7 +31,6 @@ export default class Banner extends wx.Component {
   handleTab(e) {
     let url = e.currentTarget.dataset.url;
     let id = e.currentTarget.dataset.id;
-    console.log('banner handleTap', e);
     if (id && url) {
       this.props.onBannerTap(id, url);
     } else if (id) {
@@ -60,6 +61,7 @@ export default class Banner extends wx.Component {
   }
 
   onUpdate(props) {
-    this.setData(props);
+    let list = immutable(props.list);
+    this.setData({ list });
   }
 }
